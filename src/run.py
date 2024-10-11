@@ -15,10 +15,13 @@ complaints = [
 
 
 def client_code(complaints: List):
+
+    # Создаем обработчиков
     basic_handler = BasicSupportHandler()
     tech_handler = TechnicalSupportHandler()
     manager_handler = ManagerSupportHandler()
 
+    # Устанавливаем цепочку обработчиков
     basic_handler.successor = tech_handler
     tech_handler.successor = manager_handler
 
