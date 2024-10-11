@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 
+@dataclass
 class ComplaintHandler(ABC):
 
     successor: object = None
